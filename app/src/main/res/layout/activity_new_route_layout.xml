@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        layout="@layout/new_route_actionbar_layout"
+        />
+
+    <include
+        android:id="@+id/top_tips"
+        android:layout_below="@id/actionbar"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        layout="@layout/activity_top_tips_layout"
+        />
+
+    <TextView
+        android:id="@+id/empty_route"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="还没有进行搜索"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+
+    <ScrollView
+        android:layout_below="@id/top_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <com.example.helios.baidulbs.widget.ScrollListView
+            android:id="@+id/search_route_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#C1CDCD"
+            android:dividerHeight="1dp"
+            android:fastScrollEnabled="true"
+            >
+
+        </com.example.helios.baidulbs.widget.ScrollListView>
+    </ScrollView>
+
+</RelativeLayout>

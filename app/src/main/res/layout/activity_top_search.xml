@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/textview_bg_drawable"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/top_search"
+        android:layout_width="0dp"
+        android:layout_weight="10"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:clickable="true"
+        android:text="查找地点,公交，地铁"
+        android:drawableLeft="@drawable/default_generalsearch_sugg_searchicon_normal"
+        android:drawablePadding="10dp"
+        android:layout_marginStart="20dp"
+        />
+
+    <ImageView
+        android:id="@+id/top_voice_search"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="10dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/voice_btn_normal"/>
+
+</LinearLayout>

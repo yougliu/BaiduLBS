@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#B5B5B5"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/nearby_station"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="虹桥火车站（地铁站）"
+            android:textSize="14sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"/>
+
+        <TextView
+            android:id="@+id/distance"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="100米"
+            android:textSize="14sp"
+            android:gravity="center_vertical|right"
+            android:paddingRight="20dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/bus_line"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="205路"
+        android:textSize="14sp"
+        android:paddingLeft="20dp"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:ellipsize="end"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/search_nearby"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="搜周边"
+            android:textSize="10sp"
+            android:drawableLeft="@drawable/tips_nearby"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp"
+            android:gravity="center"
+            android:clickable="true"/>
+
+        <TextView
+            android:id="@+id/search_route"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="去这里"
+            android:textSize="10sp"
+            android:drawableLeft="@drawable/tips_route"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp"
+            android:gravity="center"
+            android:clickable="true"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#B5B5B5"/>
+
+</LinearLayout>
