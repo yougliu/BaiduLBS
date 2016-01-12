@@ -60,6 +60,11 @@
             android:screenOrientation="portrait"
             />
 
+        <activity android:name=".activity.RouteActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            />
+
 
         <!--for baidu map-->
         <!--for debug.keystore 在.android文件夹下！-->

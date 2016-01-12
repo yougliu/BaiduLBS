@@ -3,6 +3,7 @@ package com.example.helios.baidulbs;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.view.View.OnClickListener;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.baidu.location.Address;
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
@@ -23,6 +25,7 @@ import com.baidu.mapapi.map.MyLocationConfiguration;
 import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.model.LatLng;
 import com.example.helios.baidulbs.activity.NewRouteActivity;
+import com.example.helios.baidulbs.activity.RouteActivity;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener{
 
@@ -40,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
     private LocationClient mLocationClient;//定位核心类
     private BitmapDescriptorFactory mCurrentMarker;
     private String mCity;
+    private String address;
     private MapStatusUpdate mStatusUpdate;
     private LatLng mLatLng;
     private MyLocationConfiguration.LocationMode mLocationMode = MyLocationConfiguration.LocationMode.NORMAL;
@@ -57,6 +61,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
                     .accuracy(location.getRadius())
                     .direction(location.getDerect()).build();
             mCity = location.getCity();
+            address = location.getAddrStr();
+            Address add = location.getAddress();
+            Log.d("bonus","address = "+address+", "+add.address+", "+add.district+", "+add.street+", "+add.streetNumber);
             mLatLng = new LatLng(location.getLatitude(),location.getLongitude());
             // 设置定位数据
             mBaiduMap.setMyLocationData(locData);
@@ -195,6 +202,11 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
             case R.id.tips_nearby:
                 break;
             case R.id.tips_route:
+                Intent routeIntent = new Intent(MainActivity.this, RouteActivity.class);
+                if(address != null){
+                    routeIntent.putExtra("address",address);
+                }
+                startActivity(routeIntent);
                 break;
             case R.id.tips_navi:
                 break;
