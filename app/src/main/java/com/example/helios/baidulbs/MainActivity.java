@@ -24,6 +24,7 @@ import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.map.MyLocationConfiguration;
 import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.model.LatLng;
+import com.example.helios.baidulbs.activity.BNDemoMainActivity;
 import com.example.helios.baidulbs.activity.NewRouteActivity;
 import com.example.helios.baidulbs.activity.RouteActivity;
 
@@ -209,6 +210,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
                 startActivity(routeIntent);
                 break;
             case R.id.tips_navi:
+                Intent navIntent = new Intent(MainActivity.this, BNDemoMainActivity.class);
+                startActivity(navIntent);
                 break;
             case R.id.tips_more:
                 break;

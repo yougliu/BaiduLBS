@@ -65,6 +65,25 @@
             android:screenOrientation="portrait"
             />
 
+        <activity android:name=".activity.RouteGuideActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+            android:screenOrientation="portrait"
+            />
+
+        <!--for test-->
+        <activity
+            android:name=".activity.BNDemoMainActivity"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+             >
+        </activity>
+
+        <activity
+            android:name=".activity.BNDemoGuideActivity"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+             >
+        </activity>
+
 
         <!--for baidu map-->
         <!--for debug.keystore 在.android文件夹下！-->
